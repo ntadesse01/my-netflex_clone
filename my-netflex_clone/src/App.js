@@ -2,14 +2,14 @@ import React from "react";
 import "./App.css";
 import Row from "./Row";
 import requests from "./requests";
- 
+ import reportWebVitals from "./reportWebVitals";
 import Banner from "./Banner";
 import Footer from "./Footer";
 
 function App() {
 	return (
 		<div className="App">
-			<Nav />
+			{/* <Nav /> */}
 			<Banner />
 			<Row
 				title="NETFLIX ORIGINALS"

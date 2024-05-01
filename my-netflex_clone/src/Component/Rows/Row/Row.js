@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "./axios";
+import axios from "../../../Pages/ulils/axios"
 import "./Row.css";
 import YouTube from "react-youtube";
 import movieTrailer from "movie-trailer";
@@ -32,7 +32,10 @@ function Row({ title, fetchUrl, isLargeRow }) {
 			movieTrailer(movie?.original_name || movie?.title || "")
 				.then((url) => {
 					const urlParams = new URLSearchParams(new URL(url).search);
+					// console.log(urlParams)
 					setTrailerUrl(urlParams.get("v"));
+					// console.log(urlParams.get("v"));
+
 				})
 				.catch((error) => console.log(error));
 		}

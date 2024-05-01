@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./Banner.css";
-import axios from "./axios";
-import requests from "./requests";
+import axios from "../../Pages/Home/Utils/axios";
+import requests from "../../Pages/Home/Utils/requests";
 
 function Banner() {
-	const [movie, setMovie] = useState([]);
+	const [movie, setMovie] = useState ([]);
 
 	useEffect(() => {
 		async function fetchData() {
