@@ -1,71 +1,152 @@
-    .header_outer_container {
-    position: sticky;
-    top: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(20, 20, 20);
-/* background-color: transparent; */
-height: 10vh;
-color: white;
-transition: all 0.5s;
-transition-timing-function: ease-in;
-z-index: 1;
-/* background-color: red; */
+.header_outer_container {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(20, 20, 20);
+  height: 10vh;
+  color: white;
+  transition: all 0.5s;
+  transition-timing-function: ease-in;
+  z-index: 1;
 }
+
 .nav_black {
-    background-color: rgb(20, 20, 20);
+  background-color: rgb(20, 20, 20);
 }
-.header_container{
-width: 90%;
-display: flex;
-justify-content: space-between;
-align-items: center;
+
+.header_container {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .header_left ul {
-    width: 140%;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    list-style: none;
-    justify-content: space-between;
-    cursor: pointer;
+  width: 140%;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
 .header_right ul {
-    width: 140%;
-    display: flex;
-    align-items: center;
-    list-style: none;
-    list-style: none;
-    justify-content: space-between;
+  width: 120%;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  justify-content: space-between;
 }
 
 .logo {
-    display: inline-block;
-    position: relative;
+  display: inline-block;
+  position: relative;
+}
+
+.netflix-img {
+  width: 100px;
+  height: auto;
+  object-fit: contain;
+}
+/* 
+.logo::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+} */
+
+.logo:hover::after {
+  opacity: 1;
+}
+
+.header_outer_container:hover {
+  background-color: rgba(20, 20, 20, 0.8);
+}
+
+.header_outer_container a {
+  text-decoration: none;
+  color: white;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
+  height: 30px;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  background-color: #111;
+}
+
+.nav__black {
+  background-color: #111;
+}
+
+/* .nav__logo {
+  width: 80px;
+  left: 20px;
+  object-fit: contain;
+} */
+
+.nav__avatar {
+  width: 30px;
+  position: fixed;
+  right: 20px;
+  object-fit: contain;
+}
+
+.nav__avatar img {
+  width: 100%;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__links li {
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.header_left ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.header_left ul li {
+  display: block;
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .header_left ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
-  
-  .netflix-img {
-    width: 100px; /* Adjust the width */
-    height: auto; /* Automatically adjusts the height to maintain aspect ratio */
-    object-fit: contain; /* Maintain aspect ratio while fitting the content */
+}
+
+.logo {
+  max-width: 196px;
+  height: auto;
+}
+
+@media (max-width: 768px) {
+  .logo {
+      max-width: 100px;
   }
-  
-  .logo::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 0, 0, 0.5); /* Adjust the color and opacity as needed */
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-  }
-  
-  .logo:hover::after {
-    opacity: 1;
-  }
-  
+}

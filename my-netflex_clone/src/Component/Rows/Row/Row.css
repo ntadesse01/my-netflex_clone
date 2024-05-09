@@ -1,32 +1,35 @@
 .row {
 	margin-left: 20px;
-	color: white;
+	color:white;
+	background-color: #111;
+	font-size:  14px;
 }
-/* //this one telling how the row should look like */
-.row__poster {
-	width: 100%;
-	object-fit: contain;
-	max-height: 100px;
-	transition: transform 450ms;
-	margin-right: 10px;
-}
-/* // this one telling how the row should look like */
-.row__posters {
+
+ 
+.row__posters{
 	display: flex;
-	overflow-y: hidden;
+	overflow-y: scroll;
 	overflow-x: scroll;
 	padding: 20px;
 }
-/* ///this one telling how row .row__posters should look like */
-.row__posters::-webkit-scrollbar {
-	display: none;
+/* //this one telling how the row should look like */
+.row__poster {
+	object-fit: contain;
+	width: 100%;
+	max-height: 100px;
+	margin-right: 10px;
+	transition: transform 450ms;
+	
 }
-
 .row__poster:hover {
 	transform: scale(1.08);
 	/* opacity: 1.2; */
 }
-
+/* // this one telling how the row should look like */
+ .row__posters::-webkit-scrollbar {
+	display: none;
+}
+ 
 .row__posterLarge {
 	max-height: 250px;
 }
